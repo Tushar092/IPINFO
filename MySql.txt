@@ -1,0 +1,4 @@
+1. SELECT COUNT(CustomerID) AS ttl FROM Customers WHERE YEAR(CURRENT_DATE()) - YEAR(Date_of_Birth) > 40;
+2. SELECT Customers.CustomerID, Customers.FirstName, Customers.City, Customers.State, SUM(Orders.Total_order_amount) AS ttl FROM Customers JOIN Orders ON Customers.CustomerID = Orders.CustomerID WHERE MONTH(Customers.Date_of_Birth) = MONTH(Customers.DateEntered) ;
+3. 
+4. SELECT CompanyName, COUNT(OrderDetails.ProductID), COUNT(OrderDetails.Quantity) FROM OrderDetails JOIN Suppliers ON OrderDetails.SupplierID = Suppliers.SupplierID ORDER BY CompanyName;
